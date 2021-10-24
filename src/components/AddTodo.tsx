@@ -12,7 +12,7 @@ const AddTodo = ({ onTodoAdded }: Props) => {
   return (
     <div className="w-1/2 mx-auto my-4 p-4 rounded border-2 border-indigo-700">
       <h2 className="mb-4 font-semibold text-indigo-500">Add a todo</h2>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <input
           type="text"
           name="add-todo"
