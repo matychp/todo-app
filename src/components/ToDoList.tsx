@@ -12,17 +12,17 @@ interface Props {
 const ToDoList = ({ todos, onTodoClicked, onTodoDeleted }: Props) => {
   return (
     <>
-      <div className="w-4/5 mx-auto m-2">
-        <h1 className="flex items-center gap-2 p-4 rounded text-2xl bg-indigo-500 text-white">
+      <div className="w-11/12 md:w-4/5 mx-auto rounded border-2 border-indigo-500">
+        <h1 className="flex items-center gap-2 p-4 text-2xl bg-indigo-500 text-white">
           <BsCardChecklist />
           Todo's
         </h1>
         {todos.length === 0 ? (
-          <h2 className="my-2 mx-4 p-2 rounded bg-indigo-300 text-white">
+          <h2 className="my-2 mx-4 p-2 rounded  text-indigo-500">
             List is empty, start by adding a todo.
           </h2>
         ) : (
-          <div>
+          <div className="flex flex-col gap-2 mx-4 py-4">
             {todos.map((todo) => (
               <ToDoItem
                 key={todo.id}
